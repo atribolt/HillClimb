@@ -2,7 +2,7 @@
 
 function(set_version PROJECT MAJOR MINOR)
   execute_process(
-    COMMAND git rev-list HEAD --count --${PROJECT}
+    COMMAND git rev-list HEAD --count -- ${PROJECT}
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     OUTPUT_VARIABLE GIT_RESULT
   )
